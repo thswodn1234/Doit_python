@@ -351,5 +351,34 @@ else 조건식:
 짝수
 ```
 
-'x와 y가 같다'라는 표현을 할 때 x == y
-'x와 y가 다르다' x != y
+'x와 y가 같다'라는 표현을 할 때 x == y, is
+'x와 y가 다르다' x != y, is not
+
+## 서비스 가격 출력 프로그램 완성하기
+
+```python
+def service_price():
+    service = input('서비스 종류를 입력하세요, a/b/c: ')	
+    valueAdded = input('부가 가치세를 포함합니까? y/n: ')	
+    if valueAdded == 'y':					
+        if service == 'a': 				
+            result = 23 * 1.1 				
+        if service == 'b':
+            result = 40 * 1.1
+        if service == 'c':
+            result = 67 * 1.1 
+    if valueAdded == 'n':					
+        if service == 'a':					
+            result = 23 					
+        if service == 'b':
+            result = 40
+        if service == 'c':
+            result = 67		
+    print(round(result,1), '만원입니다')
+```
+
+딕셔너리(dict)란 {}로 표현되며 키(key)와 벨류(value)를 한 쌍으로 저장하는 자료형
+
+완벽한 프로그램을 추구하기보다 작은 프로그램을 하나씩 만들어 보는 경험 중요
+
+파이썬에서 반환(return)은 최종 결과물을 도출하여 저장한다는 의미
